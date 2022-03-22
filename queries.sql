@@ -7,3 +7,22 @@ SELECT name, escape_attempts FROM animals WHERE weight_kg > 10.5;
 SELECT * FROM animals WHERE neutered = TRUE;
 SELECT * FROM animals WHERE name != 'Gabumon';
 SELECT * FROM animals WHERE weight_kg = 10.4 AND weight_kg = 17.3;
+
+UPDATE animals SET species = 'unspecified';
+
+/*  Unspecified Rollback */
+
+-- To start the transaction
+BEGIN;
+
+-- Updating the table
+UPDATE animals SET species = 'unspecified';
+
+-- Checking the Records
+SELECT * FROM animals;
+
+-- Rollback to Earlier state
+ROLLBACK;
+
+-- Verify the changes have been reverted
+SELECT * FROM animals; 
