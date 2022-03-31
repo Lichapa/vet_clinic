@@ -79,6 +79,11 @@ CREATE TABLE visits (
     vets_id INT NOT NULL,
     date_of_visit DATE,    
     FOREIGN KEY (animal_id) REFERENCES animals (id) ON DELETE CASCADE,
-    FOREIGN KEY (vets_id) REFERENCES vets (id) ON DELETE CASCADE,
-    PRIMARY KEY (vets_id, animal_id, date_of_visit)
+    FOREIGN KEY (vets_id) REFERENCES vets (id) ON DELETE CASCADE
 );
+
+CREATE INDEX animal_id_asc ON visits(animal_id ASC);
+
+CREATE INDEX vets_id_asc ON visits(vets_id ASC);
+
+CREATE INDEX email_asc ON owners(email ASC);
