@@ -30,7 +30,7 @@ CONSTRAINT fk_treatment FOREIGN KEY(treatment_id) REFERENCES treaments(id)
 
 CREATE TABLE invoices (
 id INT GENERATED ALWAYS AS IDENTITY,
-total_amount,
+total_amount DECIMAL(10,2),
 generated_at TIMESTMAP,
 payed_at TIMESTMAP,
 medical_history_id INT,
@@ -49,3 +49,8 @@ PRIMARY KEY (id),
 CONSTRAINT fk_invoice FOREIGN KEY (invoice_id) REFERENCES invoices(id)
 CONSTRAINT fk_treatment FOREIGN KEY (treatment_id) REFERENCES treatments(id)
 );
+
+CREATE INDEX ON medical_histories_treatments (medical_history_id);
+CREATE INDEX ON medical_histories_treatments (treatment_id);
+CREATE INDEX ON invoices_items (invoice_id);
+CREATE INDEX ON medical_histories (patient_id);
