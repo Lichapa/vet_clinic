@@ -1,8 +1,6 @@
 # VET CLINIC
 
 > This project is database for a Vet clinic that is used to practice Database Module for microverse
-> This milestone is for practicing perfomance, normalization of a database and Entity relationship diagram.
-
 ## Database Diagram
 See the [the diagram of the database](ERD.md)
 ## Getting Started

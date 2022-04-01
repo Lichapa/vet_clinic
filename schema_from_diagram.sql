@@ -50,7 +50,7 @@ CONSTRAINT fk_invoice FOREIGN KEY (invoice_id) REFERENCES invoices(id)
 CONSTRAINT fk_treatment FOREIGN KEY (treatment_id) REFERENCES treatments(id)
 );
 
-CREATE INDEX ON medical_histories_treatments (medical_history_id);
-CREATE INDEX ON medical_histories_treatments (treatment_id);
-CREATE INDEX ON invoices_items (invoice_id);
-CREATE INDEX ON medical_histories (patient_id);
+CREATE INDEX idx_medical_history_id ON medical_histories_treatments (medical_history_id);
+CREATE INDEX idx_treatment_id ON medical_histories_treatments (treatment_id);
+CREATE INDEX idx_invoice_id ON invoices_items (invoice_id);
+CREATE INDEX idx_patient ON medical_histories (patient_id);
