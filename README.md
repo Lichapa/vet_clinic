@@ -1,9 +1,10 @@
-# curriculum-databases-projects-template
+# VET CLINIC
 
-> This template should be used for database related projects at Microverse.
-> Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
+> This project is database for a Vet clinic that is used to practice Database Module for microverse
+> This milestone is for practicing perfomance, normalization of a database and Entity relationship diagram.
 
-
+## Database Diagram
+See the [the diagram of the database](ERD.md)
 ## Getting Started
 
 This repository includes files with plain SQL that can be used to recreate a database:
